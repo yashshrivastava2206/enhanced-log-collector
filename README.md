@@ -2,7 +2,7 @@
 
 **Version:** 2.0  
 **Location:** `/opt/scripts/logCollector.sh`  
-**Owner:** DB Team  
+**Owner:** YASH SHRIVASTAVA  
 **License:** Internal Use
 
 ---
@@ -1203,7 +1203,7 @@ ssh user@remote-server "/opt/scripts/logCollector.sh 'remote-task' 'script.sh' '
 
 1. **Check this README:** Most answers are documented here
 2. **Review presentation:** `/opt/scripts/presentation.html`
-3. **Contact DB Team:** dba-team@example.com
+3. **Contact Yash Shrivastava:** yash-shrivastava@example.com
 4. **Check logs:** Review logCollector's own output for errors
 
 ### Reporting Issues
@@ -1222,14 +1222,14 @@ To suggest improvements:
 
 1. Test your changes thoroughly
 2. Update this README
-3. Submit to DB Team for review
+3. Submit to Yash Shrivastava for review
 4. Include use cases and examples
 
 ---
 
 ## 📜 License
 
-Internal use only. Copyright © 2026 DB Team. All rights reserved.
+Internal use only. Copyright © 2026 Yash Shrivastava. All rights reserved.
 
 ---
 
@@ -1262,5 +1262,5 @@ Internal use only. Copyright © 2026 DB Team. All rights reserved.
 ---
 
 **Last Updated:** 2026-01-04  
-**Maintained By:** DB Team  
+**Maintained By:** Yash Shrivastava  
 **Version:** 2.0

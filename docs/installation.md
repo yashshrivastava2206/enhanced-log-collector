@@ -239,3 +239,6 @@ sudo ./scripts/uninstall.sh
 - [Configuration Guide](configuration.md) - Configure for your needs
 - [Usage Guide](usage.md) - Learn how to use the system
 - [Examples](../examples/) - See integration examples
+ ---
+
+**Previous**: [Documentation Index](README.md) | **Next**: [Configuration Guide](configuration.md) →

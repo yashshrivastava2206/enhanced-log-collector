@@ -537,6 +537,3 @@ If you're still stuck:
 ---
 
 **Previous**: [Configuration Guide](configuration.md) | **Next**: [API Reference](api.md) →
-
-
-**Previous**: [Configuration Guide](configuration.md) | **Next**: [API Reference](api.md) →

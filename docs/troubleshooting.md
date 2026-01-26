@@ -533,6 +533,10 @@ If you're still stuck:
    - Email: dba-team@example.com
    - Include diagnostic information above
 
+
 ---
+
+**Previous**: [Configuration Guide](configuration.md) | **Next**: [API Reference](api.md) →
+
 
 **Previous**: [Configuration Guide](configuration.md) | **Next**: [API Reference](api.md) →

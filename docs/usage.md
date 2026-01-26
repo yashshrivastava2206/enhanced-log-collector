@@ -422,3 +422,8 @@ See [examples/cron_example.sh](../examples/cron_example.sh)
 | Python | [examples/python_integration.py](../examples/python_integration.py) | Python wrapper class |
 | Cron | [examples/cron_example.sh](../examples/cron_example.sh) | Cron job integration |
 | Systemd | [examples/systemd_example.service](../examples/systemd_example.service) | Service integration |
+
+---
+
+**Previous**: [Installation Guide](installation.md) | **Next**: [Configuration Guide](configuration.md) →
+

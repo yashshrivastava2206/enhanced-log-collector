@@ -1,7 +1,3 @@
-**Previous**: [Documentation Index](README.md) | **Next**: [Configuration Guide](configuration.md) →
-
-
-#### `docs/configuration.md`
 ```markdown
 # Configuration Guide
 

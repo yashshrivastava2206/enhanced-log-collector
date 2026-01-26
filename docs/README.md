@@ -85,6 +85,8 @@ Welcome to the Enhanced Log Collector documentation. This system provides enterp
 
 See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
 
+**Next**: [Installation Guide](installation.md) →
+
 
 
 

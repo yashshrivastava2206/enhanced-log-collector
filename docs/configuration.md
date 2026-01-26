@@ -1,4 +1,3 @@
-```markdown
 # Configuration Guide
 
 Complete guide to configuring Enhanced Log Collector.
@@ -303,3 +302,50 @@ sudo cp /path/to/repo/config/logCollector.conf.dev /etc/logCollector.conf
 # Production
 sudo cp /path/to/repo/config/logCollector.conf.prod /etc/logCollector.conf
 ```
+
+### Per-Application Override
+
+Some applications may need special settings:
+
+```bash
+# In your script
+export BASE_LOG_DIR="/opt/special-app/logs"
+/opt/scripts/logCollector.sh 'special' 'app.sh' 'INFO' 'Message'
+```
+
+### Testing Configuration
+
+Validate your configuration:
+
+```bash
+# Check syntax
+bash -n /etc/logCollector.conf
+
+# Show current config
+make show-config
+
+# Test with your config
+/opt/scripts/logCollector.sh 'test' 'test.sh' 'INFO' 'Config test' --console
+```
+
+## Configuration Best Practices
+
+### DO
+✅ Use appropriate retention periods for your needs  
+✅ Enable compression in production  
+✅ Set up email alerts for critical events  
+✅ Document custom settings  
+✅ Test configuration changes  
+
+### DON'T
+❌ Set retention too short (lose important logs)  
+❌ Disable compression without good reason  
+❌ Send too many email alerts (alert fatigue)  
+❌ Use production config in development  
+❌ Edit config without backing it up  
+
+---
+
+**Previous**: [Usage Guide](usage.md) | **Next**: [Troubleshooting Guide](troubleshooting.md) →
+```
+

@@ -1,8 +1,3 @@
-**Previous**: [Configuration Guide](configuration.md) | **Next**: [API Reference](api.md) →
-```
-
-#### `docs/api.md`
-```markdown
 # API Reference
 
 Complete reference for Enhanced Log Collector functions and parameters.

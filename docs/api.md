@@ -389,3 +389,6 @@ Rotates a log file to the archive directory.
 |---------|--------------|---------|
 | 2.0.0 | 2026-01-04 | Complete rewrite with rotation, compression, multiple formats |
 | 1.0.0 | 2025-01-01 | Initial release |
+---
+
+**Previous**: [Troubleshooting Guide](troubleshooting.md) | **Next**: [Migration Guide](migration.md) →

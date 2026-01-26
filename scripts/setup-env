@@ -1,0 +1,91 @@
+#!/bin/bash
+################################################################################
+# Development Environment Setup Script
+################################################################################
+
+set -e
+
+# Colors
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
+
+echo -e "${GREEN}╔════════════════════════════════════════════════════════════╗${NC}"
+echo -e "${GREEN}║     Development Environment Setup                          ║${NC}"
+echo -e "${GREEN}╚════════════════════════════════════════════════════════════╝${NC}"
+echo ""
+
+# Check dependencies
+echo -e "${YELLOW}[1/5] Checking dependencies...${NC}"
+MISSING_DEPS=()
+
+for cmd in bash gzip find stat date; do
+    if ! command -v $cmd &> /dev/null; then
+        MISSING_DEPS+=($cmd)
+    fi
+done
+
+if [[ ${#MISSING_DEPS[@]} -gt 0 ]]; then
+    echo -e "${RED}✗ Missing dependencies: ${MISSING_DEPS[*]}${NC}"
+    echo -e "${YELLOW}  Install them with your package manager${NC}"
+    exit 1
+else
+    echo -e "${GREEN}✓ All required dependencies found${NC}"
+fi
+
+# Check optional dependencies
+echo -e "${YELLOW}[2/5] Checking optional dependencies...${NC}"
+command -v logger &> /dev/null && echo -e "${GREEN}✓ logger (syslog support)${NC}" || echo -e "${YELLOW}⚠ logger not found (syslog will be disabled)${NC}"
+command -v mail &> /dev/null && echo -e "${GREEN}✓ mail (email alerts)${NC}" || echo -e "${YELLOW}⚠ mail not found (email alerts will be disabled)${NC}"
+
+# Setup test directories
+echo -e "${YELLOW}[3/5] Setting up test directories...${NC}"
+mkdir -p "${REPO_DIR}/tests/output"
+mkdir -p "${REPO_DIR}/tests/tmp"
+chmod 755 "${REPO_DIR}/tests/output"
+chmod 755 "${REPO_DIR}/tests/tmp"
+echo -e "${GREEN}✓ Test directories created${NC}"
+
+# Make scripts executable
+echo -e "${YELLOW}[4/5] Setting permissions...${NC}"
+chmod +x "${REPO_DIR}/bin/logCollector.sh"
+chmod +x "${REPO_DIR}/scripts/"*.sh
+chmod +x "${REPO_DIR}/tests/"*.sh
+chmod +x "${REPO_DIR}/tools/"*.sh
+chmod +x "${REPO_DIR}/examples/"*.sh 2>/dev/null || true
+echo -e "${GREEN}✓ Permissions set${NC}"
+
+# Create local config for testing
+echo -e "${YELLOW}[5/5] Creating local test configuration...${NC}"
+cat > "${REPO_DIR}/.env.test" << 'EOF'
+# Local Test Environment Configuration
+export BASE_LOG_DIR="${REPO_DIR}/tests/output/logs"
+export TEST_MODE=true
+export ENABLE_CONSOLE_OUTPUT=true
+export ENABLE_COMPRESSION=false
+export LOG_RETENTION_DAYS=1
+EOF
+chmod 644 "${REPO_DIR}/.env.test"
+echo -e "${GREEN}✓ Test configuration created${NC}"
+
+echo ""
+echo -e "${GREEN}╔════════════════════════════════════════════════════════════╗${NC}"
+echo -e "${GREEN}║        Development Environment Ready                       ║${NC}"
+echo -e "${GREEN}╚════════════════════════════════════════════════════════════╝${NC}"
+echo ""
+echo -e "${YELLOW}Quick Start:${NC}"
+echo -e "  1. Run tests:  make test"
+echo -e "  2. Run script: ./bin/logCollector.sh 'test' 'test.sh' 'INFO' 'Hello' --console"
+echo -e "  3. Validate:   make validate"
+echo ""
+echo -e "${YELLOW}Development Commands:${NC}"
+echo -e "  make help          - Show all available commands"
+echo -e "  make test          - Run full test suite"
+echo -e "  make test-basic    - Run basic tests only"
+echo -e "  make validate      - Validate scripts"
+echo -e "  make clean         - Clean test outputs"
+echo ""

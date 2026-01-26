@@ -1,0 +1,27 @@
+[Unit]
+Description=Example Application with Log Collector
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=postgres
+Group=postgres
+WorkingDirectory=/opt/myapp
+Environment="LOG_SCRIPT=/opt/scripts/logCollector.sh"
+Environment="TASK_NAME=myapp"
+
+# Log startup
+ExecStartPre=/bin/bash -c '/opt/scripts/logCollector.sh myapp myapp.service INFO "Service starting" --console'
+
+# Main application
+ExecStart=/opt/myapp/start.sh
+
+# Log shutdown
+ExecStopPost=/bin/bash -c '/opt/scripts/logCollector.sh myapp myapp.service INFO "Service stopped" --console'
+
+# Restart policy
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

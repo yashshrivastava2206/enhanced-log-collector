@@ -1,7 +1,3 @@
-```
-
-#### `docs/troubleshooting.md`
-```markdown
 # Troubleshooting Guide
 
 Solutions to common problems and issues.

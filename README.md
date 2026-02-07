@@ -77,23 +77,21 @@ The Enhanced Log Collector is an enterprise-grade logging system designed for pr
 ## 📦 Installation
 
     ### Prerequisites
-### Prerequisites
+	**Required:**
+	- Bash 4.0 or higher (verify: `bash --version`)
+	- GNU coreutils 8.0+ (date, stat, find)
+	- gzip 1.6+ (for compression)
+	
+	**Optional:**
+	- mail/sendmail/mailx (for email alerts)
+	- logger (for syslog integration)
+	- rsyslog 8.0+ (for remote logging)
 
-**Required:**
-- Bash 4.0 or higher (verify: `bash --version`)
-- GNU coreutils 8.0+ (date, stat, find)
-- gzip 1.6+ (for compression)
-
-**Optional:**
-- mail/sendmail/mailx (for email alerts)
-- logger (for syslog integration)
-- rsyslog 8.0+ (for remote logging)
-
-**Compatibility:**
-- ✅ CentOS/RHEL 7, 8, 9
-- ✅ Ubuntu 18.04, 20.04, 22.04, 24.04
-- ✅ Debian 10, 11, 12
-- ✅ Amazon Linux 2, 2023
+	**Compatibility:**
+	- ✅ CentOS/RHEL 7, 8, 9
+	- ✅ Ubuntu 18.04, 20.04, 22.04, 24.04
+	- ✅ Debian 10, 11, 12
+	- ✅ Amazon Linux 2, 2023
 
 ### Installation Steps
 

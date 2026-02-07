@@ -1,18 +1,17 @@
 # Enhanced Log Collector System
 
-**Version:** 2.0  
-**Location:** `/opt/scripts/logCollector.sh`  
-**Owner:** YASH SHRIVASTAVA  
-**License:** Internal Use
+**Version:** 2.0    
+**Owner:** Yash Shrivastava
+**Copyright:** © 2026 Yash Shrivastava
 
 ---
 
 ## 📋 Table of Contents
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Quick Start](#quick-start)
+1. [Overview](#Overview)
+2. [Features](#Features)
+3. [Installation](#Installation)
+4. [Quick Start](#Quick Start)
 5. [Usage Examples](#usage-examples)
 6. [Configuration](#configuration)
 7. [Log Levels](#log-levels)

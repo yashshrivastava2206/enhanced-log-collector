@@ -1,9 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ################################################################################
-# Enhanced Log Collector Script
-# Location: /opt/scripts/logCollector.sh
-# Owner: YASH SHRIVASTAVA
-# Version: 2.0
+# Enhanced Log Collector v2.0
+# Author: Yash Shrivastava
+# Copyright: © 2026 Yash Shrivastava
 # Description: Enterprise-grade logging system with rotation, compression,
 #              retention policies, and multiple output formats
 ################################################################################

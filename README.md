@@ -9,9 +9,9 @@
 ## 📋 Table of Contents
 
 1. [Overview](#overview)
-2. [Features](#Features)
-3. [Installation](#Installation)
-4. [Quick Start](#Quick-Start)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Quick Start](#quick-Start)
 5. [Usage Examples](#usage-examples)
 6. [Configuration](#configuration)
 7. [Log Levels](#log-levels)
@@ -26,8 +26,7 @@
 
 ---
 
-## 🎯 Overview
-#overview
+## 🎯 overview
 
 The Enhanced Log Collector is an enterprise-grade logging system designed for production database and application environments. It transforms simple logging into a comprehensive observability solution with automatic rotation, compression, retention policies, and multiple output formats.
 
@@ -47,7 +46,7 @@ The Enhanced Log Collector is an enterprise-grade logging system designed for pr
 
 ---
 
-## 🚀 Features
+## 🚀 #features
 
 ### Core Capabilities
 

@@ -111,7 +111,7 @@ LOG_RETENTION_DAYS=30
 ARCHIVE_RETENTION_DAYS=90
 ENABLE_COMPRESSION=true
 ENABLE_EMAIL_ALERTS=true
-ALERT_EMAIL="dba-team@example.com"
+ALERT_EMAIL="admin@yourdomain.com"
 ALERT_LEVELS="FATAL,CRITICAL"
 EOF
 
@@ -323,7 +323,7 @@ ENABLE_SYSLOG=false                   # Don't send to syslog by default
 
 # Email Alerts
 ENABLE_EMAIL_ALERTS=true              # Enable email notifications
-ALERT_EMAIL="dba-team@example.com"    # Email address for alerts
+ALERT_EMAIL="admin@yourdomain.com"    # Email address for alerts
 ALERT_LEVELS="FATAL,CRITICAL"         # Comma-separated list of levels to alert
 
 # Custom Settings
@@ -374,7 +374,7 @@ ARCHIVE_RETENTION_DAYS=90
 ENABLE_COMPRESSION=true
 ENABLE_SYSLOG=true                    # Send to centralized syslog
 ENABLE_EMAIL_ALERTS=true
-ALERT_EMAIL="dba-oncall@example.com"
+ALERT_EMAIL="admin@yourdomain.com"
 ALERT_LEVELS="FATAL,CRITICAL"         # Only critical alerts
 ```
 
@@ -816,8 +816,17 @@ ls -laht /var/log/test/
 # Check permissions
 namei -l /var/log/test/current/test.sh_2026-01-04.log
 ```
+### Exit Codes
 
----
+| Code | Meaning |
+|------|---------|
+| 0    | Success |
+| 1    | Invalid arguments |
+| 2    | Permission denied |
+| 3    | Disk space error |
+| 4    | Configuration error |
+| 5    | Email send failure |
+
 
 ## 🔄 Migration from v1.0
 

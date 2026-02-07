@@ -1,0 +1,42 @@
+
+# Logs
+*.log
+*.log.gz
+/var/log/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build artifacts
+*.tar.gz
+*.zip
+dist/
+build/
+
+# Configuration (keep examples only)
+/config/logCollector.conf
+!/config/*.example
+!/config/*.dev
+!/config/*.test
+!/config/*.prod
+
+# Test outputs
+tests/output/
+tests/*.log
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+Thumbs.db
+.Trash-*
+
+# Backup files
+*.backup
+*.bak
